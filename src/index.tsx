@@ -2,16 +2,14 @@ import "cockpit-dark-theme";
 //import "@patternfly/patternfly/patternfly-base.scss";
 import '@patternfly/react-core/dist/styles/base.css';
 
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { Application } from './app';
 
 //import "patternfly/patternfly-5-overrides.scss";
 
-document.addEventListener("DOMContentLoaded", function () {
-  ReactDOM.render(
-    <Application />,
-    document.getElementById("app"),
-  )
-});
+const container = document.getElementById('app');
+if (!container)
+  throw new Error('Tailscale application mount point is missing');
+
+createRoot(container).render(<Application />);
 

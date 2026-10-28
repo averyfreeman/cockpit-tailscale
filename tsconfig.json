@@ -3,9 +3,11 @@
     "baseUrl": ".",
     "rootDir": ".",
     "target": "esnext",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "typeRoots": ["@types"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "typeRoots": [
+      "@types"
+    ],
     "allowJs": true,
     "declaration": true,
     "sourceMap": true,
@@ -14,13 +16,24 @@
     "forceConsistentCasingInFileNames": true,
     "strict": false,
     "skipLibCheck": true,
-    "lib": ["es6", "dom"],
-    "jsx": "react",
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "jsx": "react-jsx",
     "paths": {
-      "@app/*": ["src/*"],
-      "@assets/*": ["node_modules/@patternfly/react-core/dist/styles/assets/*"]
+      "@app/*": [
+        "src/*"
+      ],
+      "@assets/*": [
+        "node_modules/@patternfly/react-core/dist/styles/assets/*"
+      ]
     }
   },
-  "include": ["src"],
-  "exclude": ["node_modules"]
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
